@@ -33,12 +33,15 @@
        var msgEle=document.getElementById('message')
        if(user && userPasswordInput.value==user.password){
       
-        msgEle.innerHTML="Welcome to admin"
-       }else{
+        msgEle.innerHTML="Welcome to admin "
+        msgEle.style.color = "green";
+       }else{   
+        msgEle.style.color = "red";
         msgEle.innerHTML="Invalid Username or Password "
+       
        }
     
-        alert("test" + user.password);
+        // alert("test" + user.password);
       }
     </script>
   </body>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Details</title>
+  </head>
+  <body style="font-size: large;  ">
+    <div
+      style="
+        border: 1px solid rgb(247, 250, 247);
+        display: inline-block;
+        padding: 12px;
+      "
+    >
+      <h2>Generating new rows with Dynamic Data</h2>
+      <hr />
+
+      <form id="employeeForm">
+        <input type="text" id="employeeId" placeholder="Enter Employee ID" />
+
+        <input
+          type="text"
+          id="employeeName"
+          placeholder="Enter Employee Name"
+        />
+
+        <input type="text" id="position" placeholder="Enter Position" />
+
+        <input type="number" id="salary" placeholder="Enter Salary" />
+        <br /><br />
+
+        <button type="button" onclick="addEmployee()">Add to Table</button>
+      </form>
+<hr><div style="border:1px solid">
+      <table style="border:1px solid black; width: 100%; border-collapse: collapse; ">
+        <thead style="margin:10px; border: 1px solid #191616; padding: 10px">
+          <tr>
+            <th style="border: 1px solid #191616; padding: 10px">
+              Employee ID
+            </th>
+            <th style="border: 1px solid #191616; padding: 10px">
+              Employee Name
+            </th>
+            <th style="border: 1px solid #191616; padding: 10px">Position</th>
+            <th style="border: 1px solid #191616; padding: 10px">Salary</th>
+          </tr>
+        </thead>
+        <tbody
+          id="employeeTable"
+          style="text-align: center; border: 1px solid #191616; padding: 10px"
+        ></tbody>
+      </table>
+    </div>
+    </div>
+    <script>
+      function addEmployee() {
+        const employeeId = document.getElementById("employeeId").value;
+        const employeeName = document.getElementById("employeeName").value;
+        const position = document.getElementById("position").value;
+        const salary = document.getElementById("salary").value;
+
+        if (!employeeId || !employeeName || !position || !salary) {
+          alert("Please fill in all fields!");
+        }
+
+        const table = document.getElementById("employeeTable");
+        const row = table.insertRow();
+
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
+        const cell3 = row.insertCell(2);
+        const cell4 = row.insertCell(3);
+
+        cell1.textContent = employeeId;
+        cell2.textContent = employeeName;
+        cell3.textContent = position;
+        cell4.textContent = salary;
+        const cells = [cell1, cell2, cell3, cell4];
+        cells.forEach((cell) => {
+          cell.style.border = "1px solid #191616";
+
+        });
+      }
+    </script>
+  </body>
+</html>

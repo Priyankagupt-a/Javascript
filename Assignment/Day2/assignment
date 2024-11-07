@@ -1,0 +1,46 @@
+Assignments
+~~~~~~~~~~~
+1  Create a html page to develop Login functionality (Check Ref. Image).  And also  apply styles to result message. 
+		a.  Welcome message display in Green color
+		b.  Invalid message display in Red color
+		
+2.   Create a web page to process product details using JavaScript.  Calculate total amount based on the given values.  (Refer the Image)
+
+		a.  Take the confirmation from the user before proceeding the total calculation. 
+
+	Hint :   If qty is more than 10  	---   give 10% discount 
+				 If qty is more than 20  	---   give 15% discount 
+				 If qty is more than 30  	---   give 20% discount 
+
+3.   Create a web page to perform all math operations (Add, Sub, Multiply, Div) using JavaScript.(Check Ref. Image)
+
+Hint :   Use event.target option 
+
+ 
+4.  Create a web page to read empno, ename, job, salary from the user (use input boxes). 		
+		Add the details to table by insert a new row with textbox values.   (Check Ref. Image)
+		
+	
+5.  Create a web page to implement the following requirement :  (Check Ref. Image)
+
+		a.  Copy data from the below url and prepare array of users objects. 
+						  	https://reqres.in/api/users
+							
+		b.  Display the users data in table format.
+		
+		c. Use DOM Manipulation and DOM Table methods to create new rows and cells. 
+
+		d.  Add "Remove" in every row so that user can remove the required user.
+	
+-------------------------------------------------------------------------------------------------------------------------
+
+
+ 
+			
+
+
+
+
+
+
+ 

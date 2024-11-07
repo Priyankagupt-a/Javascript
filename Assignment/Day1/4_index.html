@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programming -- Array Of Objects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #333;
+        }
+        button {
+            padding: 8px 12px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+      
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body > <div
+    style="
+      border: 1px solid rgb(247, 250, 247);
+      display: inline-block;
+      padding: 12px;
+    "
+  >
+
+    <h2>JavaScript Programming -- Array Of Objects</h2>
+    <hr>
+   
+    <button id="loadDataButton">Get Data</button>
+    <table id="studentTable" style="display: none;">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Skill Set</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+</div>
+    <script>
+         const studentList = [
+            { id: 1, name: "Priyanka Gupta", skill: "JavaScript, React.js" },
+            { id: 2, name: "Vaibhavi Desai", skill: "CSS, HTML" },
+            { id: 3, name: "Arjun Mehta", skill: "Python, Django" },
+            { id: 4, name: "Rahul Kapoor", skill: "Java, Spring" },
+            { id: 5, name: "Neha Sharma", skill: "AWS, Docker" }
+        ];
+
+        function loadStudentData() {
+            const table = document.getElementById('studentTable');
+            const tableBody = document.getElementById('tableBody');
+            tableBody.innerHTML = '';
+            studentList.forEach((student) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${student.id}</td>
+                    <td>${student.name}</td>
+                    <td>${student.skill}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+            table.style.display = 'table';
+        }
+
+        document.getElementById('loadDataButton').addEventListener('click', loadStudentData);
+    </script>
+</body>
+</html>

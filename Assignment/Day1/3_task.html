@@ -1,0 +1,54 @@
+<html>
+  <head></head>
+  <body>
+    <h3>JavaScript Programming -- Dynamic Operations on Arrays</h3>
+    <hr />
+
+    Skill Name: <input type="text" id="t1" /> <br /><br />
+
+    <input type="button" value="Get Data" onclick="fn_getData()" />
+    <input type="button" value="Add Data" onclick="fn_addData()" />
+    <input type="button" value="Remove Data" onclick="fn_removeData()" />
+
+    <ol id="list1"></ol>
+
+    <script>
+      var skillsArray = ["HTML5", "CSS3", "BOOTSTRAP", "ANGULAR", "REACT"];
+
+      function fn_getData() {
+        let str = "";
+        for (let item of skillsArray) {
+          str += "<li>" + item + "</li>";
+        }
+        var lstObj = document.getElementById("list1");
+        lstObj.innerHTML = str;
+      }
+
+      function fn_addData() {
+        let txtObj = document.getElementById("t1");
+        let newItem = txtObj.value;
+
+        if (skillsArray.includes(newItem)) {
+          alert("Item already exists in the list!");
+        } else {
+          skillsArray.push(newItem);
+          fn_getData();
+        }
+      }
+
+      function fn_removeData() {
+        let txtObj = document.getElementById("t1");
+        let itemToRemove = txtObj.value;
+
+        let index = skillsArray.indexOf(itemToRemove);
+
+        if (index !== -1) {
+          skillsArray.splice(index, 1);
+          fn_getData();
+        } else {
+          alert("Item does not exist in the list!");
+        }
+      }
+    </script>
+  </body>
+</html>

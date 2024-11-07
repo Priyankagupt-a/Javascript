@@ -1,0 +1,61 @@
+
+1.   What is map() array method?  How to use  map() method in javascript?   
+
+The map() method in JavaScript is an array function that creates a new array populated with the results of calling a provided function on every element in the original array. It is commonly used for transforming or processing array elements without altering the original array.
+
+const newArray = array.map(callback(currentValue, index, array), thisArg);
+
+
+2.   What are other usages of spread operator (...) in JavaScript?
+
+	•	Copying arrays
+	•	Merging arrays
+	•	Adding elements to arrays
+	•	Converting a string to an array of characters
+	•	Copying and merging objects
+	•	Passing array elements as function arguments
+
+
+
+// Copying Arrays
+
+
+const originalArray = [1, 2, 3];
+const copiedArray = [...originalArray];
+console.log("Copied Array:", copiedArray); // Output: [1, 2, 3]
+
+// Merging Arrays
+const array1 = [1, 2];
+const array2 = [3, 4];
+console.log("Combined Array:", combinedArray); // Output: [1, 2, 3, 4]
+
+// Adding Elements to Arrays
+const numbers = [2, 3];
+const withNewElement = [1, ...numbers, 4];
+console.log("Array with New Elements:", withNewElement); // Output: [1, 2, 3, 4]
+
+// Converting a String to an Array of Characters
+const word = "hello";
+const letters = [...word];
+console.log("String to Array of Characters:", letters); // Output: ['h', 'e', 'l', 'l', 'o']
+
+// Copying and Merging Objects
+const person = { name: "Alice", age: 25 };
+const updatedPerson = { ...person, age: 26 };
+console.log("Updated Person Object:", updatedPerson); // Output: { name: "Alice", age: 26 }
+
+// Passing Array Elements as Function Arguments
+const nums = [1, 2, 3];
+function add(a, b, c) {
+    return a + b + c;
+}
+console.log("Sum of Array Elements:", add(...nums)); // Output: 6
+
+
+
+3.   Study the "Array dynamic operations" example and update the file to implement the below requirements:
+			a.  Duplicates are not allowed while adding new items
+			b.  Notify the user if the item does not exists while delete an item
+			
+4. Create a web page to display student details in table format.  Use Array of object concepts in javascript to implement   this example. (check the ref. image)
+

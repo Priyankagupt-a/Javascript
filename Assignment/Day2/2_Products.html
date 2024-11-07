@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment/Day2/Assignment2_Products.html</title>
+  </head>
+  <body>
+    <div
+      style="border: 7px solid magenta; display: inline-block; padding: 12px;"
+    >
+      Product name : <input type="text" id="productName" /> <br /><br />
+      Unit price : <input type="number" id="unitPrice" /> <br /><br />
+      Quantity :<input type="number" id="quantity" /><br /><br />
+      <button onclick="handleTotalAmount()">Get Total</button><br />
+      <p id="totalAmount"></p>
+    </div>
+    <script>
+      function handleTotalAmount() {
+        var pEle = document.getElementById("totalAmount");
+
+        var unitEle = document.getElementById("unitPrice");
+        var quantityEle = document.getElementById("quantity");
+        var productEle = document.getElementById("productName");
+        if (unitEle.value && quantityEle.value && productEle.value) {
+          
+          if (quantityEle.value > 30) {
+            pEle.innerHTML =
+              "Total Amount : " + unitEle.value * quantityEle.value * 0.8;
+          } else if (quantity.value > 20) {
+            pEle.innerHTML =
+              "Total Amount :" + unitEle.value * quantityEle.value * 0.85;
+          } else {
+            pEle.innerHTML =
+              "Total Amount :" + unitEle.value * quantityEle.value 
+          }
+        } else {
+         alert("Add all the columns");
+        }
+      }
+    </script>
+  </body>
+</html>

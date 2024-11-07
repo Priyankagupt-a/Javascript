@@ -1,0 +1,45 @@
+<html>
+  <head></head>
+  <body>
+    <h2>JavaScript Programming</h2>
+    <hr />
+
+    <div style="border: 1px solid black; display: inline-block; padding-left: 20px;">
+      <h3>User Login</h3>
+
+      UserName: <input value="" id="userName" /><br /><br />
+      Password: <input value="" id="password" /><br /><br />
+
+      <button onclick="hangleClick()">LogIn</button>
+      <p id="message"></p>
+    </div>
+
+    <script>
+      const users = [
+        {
+          username: "Priyanka",
+          password: 123,
+        },
+        {
+          username: "John",
+          password: 456,
+        },
+      ];
+      function hangleClick() {
+        var userInput = document.getElementById("userName");
+
+       const user=users.find(item=>item.username==userInput.value)
+       var userPasswordInput = document.getElementById("password");
+       var msgEle=document.getElementById('message')
+       if(user && userPasswordInput.value==user.password){
+      
+        msgEle.innerHTML="Welcome to admin"
+       }else{
+        msgEle.innerHTML="Invalid Username or Password "
+       }
+    
+        alert("test" + user.password);
+      }
+    </script>
+  </body>
+</html>

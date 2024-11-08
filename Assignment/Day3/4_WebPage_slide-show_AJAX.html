@@ -1,0 +1,50 @@
+<!-- 4.  Create a web page to implement the following requirement:
+a. Image slide-show :  display image randomly from the collection (array of images)
+b. Prepare button with images :  start, stop
+c.  Sideshow time :   every 2 sec. should change the image.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slideshow</title>
+  </head>
+  <body>
+    <div style="display: inline-block">
+      <img id="img" alt="Slideshow Image" src="https://dcblog.b-cdn.net/wp-content/uploads/2021/02/Full-form-of-URL-1.jpg" width="300" height="200" />
+      <br />
+      <button id="start" onclick="handleStart()">Start</button>
+      <button id="stop" onclick="handleStop()">Stop</button>
+    </div>
+
+    <script>
+      const img = [
+        "https://dcblog.b-cdn.net/wp-content/uploads/2021/02/Full-form-of-URL-1.jpg","https://images.squarespace-cdn.com/content/v1/60f1a490a90ed8713c41c36c/1629223610791-LCBJG5451DRKX4WOB4SP/37-design-powers-url-structure.jpeg","https://canto-wp-media.s3.amazonaws.com/app/uploads/2019/07/19194551/how-to-make-a-url-for-a-picture-on-your-computer-4.jpg",
+        "https://www.hocalwire.com/content/servlet/RDESController?command=rdm.Picture&sessionId=RDWEBLETHPENWIWYSOSZJNEMVJSFXLLJBTD1K&app=rdes&partner=ally&type=7&uid=UrqcwKUWdSIBFwKspwg7hiPlTyX5TAoB7033284"
+      ];
+
+      let interval;
+
+   
+      function changeImage() {
+        const randomIndex = Math.floor(Math.random() * img.length);
+        const imgEle = document.getElementById("img");
+        imgEle.src = img[randomIndex];
+      }
+
+
+      function handleStart() {
+        interval = setInterval(changeImage, 2000);
+      }
+
+
+      function handleStop() {
+        clearInterval(interval);
+      }
+
+      
+     
+    </script>
+  </body>
+</html>

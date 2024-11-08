@@ -1,0 +1,89 @@
+<!-- 3. Create a web page to implement the following requirement:
+	
+			a.  Read country name from the user 
+			b.  Create a  Button "Get Universities"  
+			c.  In button click, get employee data from server using fetch() methods
+					Url :   http://universities.hipolabs.com/search?country=india
+					
+					Note:  update the country name in the above url based on the user input ===============
+			d. use async and await options to implement. 
+			e. Points to consider 
+
+
+				--   This api returns huge no. of records, display first twenty universities names
+				--   Display universities name and its state in ordered lists format  
+				--   Display the corresponding message if the server does not return any data
+				--   Optionally :   Alternate items should display in diff. colors. 
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universities Name</title>
+    <style>
+        .alternate-row {
+          background-color: #f0c9c9;
+        }
+      </style>
+  </head>
+  <body style="display: inline-block;">
+    <h1>AJAX Operations!</h1>
+    <hr />
+    Country Name : <input type="text" id="country" /><br /><br />
+    <button onclick="handleData()">Get Universities</button>
+    <table>
+      <thead>
+        <th>University name</th>
+        <th>State</th>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <script>
+      function handleData() {
+        
+      const country = document.getElementById("country").value.trim();
+      if (!country) {
+          alert("Please enter a country name.");
+          return;
+        }
+
+        let url = `http://universities.hipolabs.com/search?country=${country}`; 
+
+        const data = async () => {
+          try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error("Network response was not ok."); 
+            const result = await response.json();
+            if (result.length === 0) {
+              alert("server does not return any data");
+              return; 
+            }
+
+            console.log(result);
+
+            let tbodyEle = document.getElementById("tbody");
+            tbodyEle.innerHTML = "";
+            result.slice(0, 20).forEach((element, i) => {
+              const row = tbodyEle.insertRow();
+
+              const nameCell = row.insertCell();
+              const stateCell = row.insertCell();
+
+              nameCell.textContent = `${i + 1}. ${element.name}`; 
+              stateCell.textContent = element["state-province"] || "N/A";
+              if (i % 2 === 1) {
+              row.classList.add("alternate-row");
+            }
+            });
+          } catch (error) {
+            alert("Error: " + error.message); 
+          }
+        };
+        data();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!-- 1. Create a web  page  to implement the following requirement:
+		 a. Create a promise that will generate a random number between 1 to 50
+		 b. If the number is 5 multiple,  resolve the send that number
+		 b. Else, reject with error message. -->
+
+<html>
+  <head></head>
+  <body>
+    <h3>Asynchronous Programming in JavaScript</h3>
+    <hr />
+
+    <script>
+      var promiseObj = new Promise((resolve, reject) => {
+        const random50 = Math.floor(Math.random() * 50 + 1);
+        if (random50 % 5 === 0) {
+          resolve(`Random number is: ${random50}`); // Use a single string
+        } else {
+          reject(`Error! ${random50} is not a multiple of 5`); // Use a single string
+        }
+      });
+      console.log("test");
+      promiseObj
+        .then((result) => console.log("Resolved with:", result))
+        .catch((error) => console.log("Rejected with:", error));
+    </script>
+  </body>
+</html>

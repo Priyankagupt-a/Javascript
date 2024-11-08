@@ -1,0 +1,107 @@
+<!-- 2.  Create a web  page  to implement the following requirement: (Update the yesterday's  Assignment-5)
+		a.  Write the code to get the data from the following url using fetch() 
+					https://reqres.in/api/users
+		b.  Display the user details in table format when we click "Load Users" button	 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array of Objects || DOM</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      th {
+        border: 2px solid #191616;
+        padding: 10px;
+        background-color: #faf3c4;
+      }
+
+      td {
+        border: 1px solid #191616;
+        padding: 10px;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      .remove-button {
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JavaScript Programming - Array of Objects</h2>
+    <hr />
+    <button onclick="getUserDetails()">Load Users</button>
+
+    <table id="userList" style="display: none">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Avatar</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tableData"></tbody>
+    </table>
+
+    <script>
+      async function getUserDetails() {
+        try {
+          const response = await fetch("https://reqres.in/api/users");
+          const data = await response.json();
+          const users = data.data;
+          console.log(users);
+
+          const tableData = document.getElementById("tableData");
+          tableData.innerHTML = "";
+
+          users.forEach((user) => {
+            const row = tableData.insertRow();
+
+            const emailCell = row.insertCell();
+            emailCell.textContent = user.email;
+
+            const firstNameCell = row.insertCell();
+            firstNameCell.textContent = user.first_name;
+
+            const lastNameCell = row.insertCell();
+            lastNameCell.textContent = user.last_name;
+
+            const avatarCell = row.insertCell();
+            const image = document.createElement("img");
+            image.src = user.avatar;
+            image.alt = user.first_name;
+            avatarCell.appendChild(image);
+
+            const removeCell = row.insertCell();
+            const removeButton = document.createElement("button");
+            removeButton.textContent = "Remove";
+            removeButton.className = "remove-button";
+            removeButton.onclick = () => row.remove();
+            removeCell.appendChild(removeButton);
+          });
+
+          document.getElementById("userList").style.display = "table";
+        } catch (error) {
+          console.error("Error fetching user data:", error);
+        }
+      }
+    </script>
+  </body>
+</html>

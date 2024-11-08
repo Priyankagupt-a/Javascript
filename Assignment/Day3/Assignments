@@ -1,0 +1,33 @@
+Assignments 
+~~~~~~~~~~~~ 
+
+1. Create a web  page  to implement the following requirement:
+		 a. Create a promise that will generate a random number between 1 to 50
+		 b. If the number is 5 multiple,  resolve the send that number
+		 b. Else, reject with error message.
+
+2.  Create a web  page  to implement the following requirement: (Update the yesterday's  Assignment-5)
+		a.  Write the code to get the data from the following url using fetch() 
+					https://reqres.in/api/users
+		b.  Display the user details in table format when we click "Load Users" button	
+
+3. Create a web page to implement the following requirement:
+	
+			a.  Read country name from the user 
+			b.  Create a  Button "Get Universities"  
+			c.  In button click, get employee data from server using fetch() methods
+					Url :   http://universities.hipolabs.com/search?country=india
+					
+					Note:  update the country name in the above url based on the user input
+			d. use async and await options to implement. 
+			e. Points to consider 
+				-->   This api returns huge no. of records, display first twenty universities names
+				-->   Display universities name and its state in ordered lists format  
+				-->   Display the corresponding message if the server does not return any data
+				-->   Optionally :   Alternate items should display in diff. colors. 
+ 
+ 4.  Create a web page to implement the following requirement:
+		a. Image slide-show :  display image randomly from the collection (array of images)
+		b. Prepare button with images :  start, stop
+		c.  Sideshow time :   every 2 sec. should change the image. 
+	

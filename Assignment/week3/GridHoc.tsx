@@ -6,7 +6,7 @@ interface GridHocProps {
   dataProperties: string[];
 }
 
-// Define types for the state
+
 interface Address {
   street: string;
   suite: string;
@@ -56,12 +56,11 @@ const GridHoc: React.FC<GridHocProps> = ({ url, dataProperties }) => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
-  // Clean up property names by trimming spaces and ensuring they match the keys of PostData
-  const formatProperty = (property: string) => {
+    const formatProperty = (property: string) => {
     return property.trim().toLowerCase();
   };
 
-  // Dynamically create columns based on dataProperties
+
   return (
     <div>
       <table

@@ -25,7 +25,7 @@ interface PostData {
   email: string;
   phone: string;
   website: string;
-//   address?: Address; // Optional address field
+
 }
 
 const GridHoc: React.FC<GridHocProps> = ({ url, dataProperties }) => {
@@ -97,10 +97,10 @@ const GridHoc: React.FC<GridHocProps> = ({ url, dataProperties }) => {
               }}
             >
               {dataProperties.map((property, propIndex) => {
-                // Format the property to match the key in PostData
+   
                 const formattedProperty = formatProperty(property);
 
-                // Check if property exists in the user object
+      
                 if (formattedProperty in user) {
                   return (
                     <td

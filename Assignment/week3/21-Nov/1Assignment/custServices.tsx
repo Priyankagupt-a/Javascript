@@ -43,17 +43,36 @@ const getAllCust = async (): Promise<Customer[]> => {
     return [];
   }
 };
+const getTop5Cust = async (sortOrder: "asc" | "desc" = "desc"): Promise<Customer[]> => {
+  try {
+    const response = await axios.get<Customer[]>(`${BASE_URL}?_sort=totalPurchasesPerYear&_order=${sortOrder}&_limit=5`);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching top 5 customer data:", error);
+    return [];
+  }
+};
 
 const createCust = async (custObj:Customer): Promise<Customer> => {
     const response = await axios.post<Customer>(`${BASE_URL}`, custObj);
     return response.data;
   };
-export const CustServices = {
-    getAllCust,createCust
+
+const updateCust=async (custObj:Customer): Promise<Customer> => {
+  const response= await axios.put<Customer>(`${BASE_URL}/${custObj.customerId}`,custObj )
+  return response.data;
 }
-//     getAllDepartments,
+
+const deleteCust=async(id:number):Promise<void>=>{
+  await axios.delete(`${BASE_URL}/${id}`)
+  
+}
+export const CustServices = {
+    getAllCust,createCust,updateCust,deleteCust,getTop5Cust
+}
+// --    getAllDepartments,
 //     getDeptById,
-//     createDept,
-//     updateDept,
-//     deleteDept
+//  --   createDept,
+//   --  updateDept,
+//   -- deleteDept
 // };

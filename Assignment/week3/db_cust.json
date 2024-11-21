@@ -1,0 +1,22 @@
+{
+  "customers": [
+    {
+      "customerId": 1,
+      "name": "Priyanka",
+      "city": "Bihar",
+      "contactNumber": "789023-456",
+      "year": 2024,
+      "photo": "https://posterjack.ca/cdn/shop/articles/Tips_for_Taking_Photos_at_the_Beach_55dd7d25-11df-4acf-844f-a5b4ebeff4df.jpg?v=1563409972&width=1500",
+      "totalPurchasesPerYear": 1000
+    },{
+      "customerId": 2,
+      "name": "Priyanka",
+      "city": "Bihar",
+      "contactNumber": "789023-456",
+      "year": 2024,
+      "photo": "https://posterjack.ca/cdn/shop/articles/Tips_for_Taking_Photos_at_the_Beach_55dd7d25-11df-4acf-844f-a5b4ebeff4df.jpg?v=1563409972&width=1500",
+      "totalPurchasesPerYear": 1000
+    }
+    
+  ]
+}

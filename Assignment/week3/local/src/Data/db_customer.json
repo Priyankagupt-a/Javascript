@@ -1,0 +1,211 @@
+{
+  "customers": [
+    {
+      "customerId": 1,
+      "name": "Customer 1",
+      "city": "City 1",
+      "contactNumber": "1234567891",
+      "year": "100",
+      "photo": "https://randomuser.me/api/portraits/men/1.jpg",
+      "totalPurchasesPerYear": "1000"
+    },
+    {
+      "customerId": 2,
+      "name": "Customer 2",
+      "city": "City 2",
+      "contactNumber": "1234567892",
+      "year": "200",
+      "photo": "https://randomuser.me/api/portraits/women/2.jpg",
+      "totalPurchasesPerYear": "2000"
+    },
+    {
+      "customerId": 3,
+      "name": "Customer 3",
+      "city": "City 3",
+      "contactNumber": "1234567893",
+      "year": "300",
+      "photo": "https://randomuser.me/api/portraits/men/3.jpg",
+      "totalPurchasesPerYear": "3000"
+    },
+    {
+      "customerId": 4,
+      "name": "Customer 4",
+      "city": "City 4",
+      "contactNumber": "1234567894",
+      "year": "400",
+      "photo": "https://randomuser.me/api/portraits/men/4.jpg",
+      "totalPurchasesPerYear": "4000"
+    },
+    {
+      "customerId": 5,
+      "name": "Customer 5",
+      "city": "City 5",
+      "contactNumber": "1234567895",
+      "year": "500",
+      "photo": "https://randomuser.me/api/portraits/women/5.jpg",
+      "totalPurchasesPerYear": "5000"
+    },
+    {
+      "customerId": 8,
+      "name": "Customer 8",
+      "city": "City 8",
+      "contactNumber": "1234567898",
+      "year": "800",
+      "photo": "https://randomuser.me/api/portraits/women/8.jpg",
+      "totalPurchasesPerYear": "8000"
+    },
+    {
+      "customerId": 10,
+      "name": "Customer 10",
+      "city": "City 10",
+      "contactNumber": "1234567801",
+      "year": "1000",
+      "photo": "https://randomuser.me/api/portraits/men/10.jpg",
+      "totalPurchasesPerYear": "10000"
+    },
+    {
+      "customerId": 11,
+      "name": "Customer 11",
+      "city": "City 11",
+      "contactNumber": "1234567802",
+      "year": "1100",
+      "photo": "https://randomuser.me/api/portraits/men/11.jpg",
+      "totalPurchasesPerYear": "11000"
+    },
+    {
+      "customerId": 12,
+      "name": "Customer 12",
+      "city": "City 12",
+      "contactNumber": "1234567803",
+      "year": "1200",
+      "photo": "https://randomuser.me/api/portraits/women/12.jpg",
+      "totalPurchasesPerYear": "12000"
+    },
+    {
+      "customerId": 13,
+      "name": "Customer 13",
+      "city": "City 13",
+      "contactNumber": "1234567804",
+      "year": "1300",
+      "photo": "https://randomuser.me/api/portraits/men/13.jpg",
+      "totalPurchasesPerYear": "13000"
+    },
+    {
+      "customerId": 14,
+      "name": "Customer 14",
+      "city": "City 14",
+      "contactNumber": "1234567805",
+      "year": "1400",
+      "photo": "https://randomuser.me/api/portraits/men/14.jpg",
+      "totalPurchasesPerYear": "14000"
+    },
+    {
+      "customerId": 15,
+      "name": "Customer 15",
+      "city": "City 15",
+      "contactNumber": "1234567806",
+      "year": "1500",
+      "photo": "https://randomuser.me/api/portraits/women/15.jpg",
+      "totalPurchasesPerYear": "15000"
+    },
+    {
+      "customerId": 16,
+      "name": "Customer 16",
+      "city": "City 16",
+      "contactNumber": "1234567807",
+      "year": "1600",
+      "photo": "https://randomuser.me/api/portraits/men/16.jpg",
+      "totalPurchasesPerYear": "16000"
+    },
+    {
+      "customerId": 17,
+      "name": "Customer 17",
+      "city": "City 17",
+      "contactNumber": "1234567808",
+      "year": "1700",
+      "photo": "https://randomuser.me/api/portraits/men/17.jpg",
+      "totalPurchasesPerYear": "17000"
+    },
+    {
+      "customerId": 18,
+      "name": "Customer 18",
+      "city": "City 18",
+      "contactNumber": "1234567809",
+      "year": "1800",
+      "photo": "https://randomuser.me/api/portraits/women/18.jpg",
+      "totalPurchasesPerYear": "18000"
+    },
+    {
+      "customerId": 19,
+      "name": "Customer 19",
+      "city": "City 19",
+      "contactNumber": "1234567810",
+      "year": "1900",
+      "photo": "https://randomuser.me/api/portraits/men/19.jpg",
+      "totalPurchasesPerYear": "19000"
+    },
+    {
+      "customerId": 20,
+      "name": "Customer 20",
+      "city": "City 20",
+      "contactNumber": "1234567811",
+      "year": "2000",
+      "photo": "https://randomuser.me/api/portraits/men/20.jpg",
+      "totalPurchasesPerYear": "20000"
+    },
+    {
+      "customerId": 21,
+      "name": "Customer 21",
+      "city": "City 21",
+      "contactNumber": "1234567812",
+      "year": "2100",
+      "photo": "https://randomuser.me/api/portraits/women/21.jpg",
+      "totalPurchasesPerYear": "21000"
+    },
+    {
+      "customerId": 22,
+      "name": "Customer 22",
+      "city": "City 22",
+      "contactNumber": "1234567813",
+      "year": "2200",
+      "photo": "https://randomuser.me/api/portraits/men/22.jpg",
+      "totalPurchasesPerYear": "22000"
+    },
+    {
+      "customerId": 23,
+      "name": "Customer 23",
+      "city": "City 23",
+      "contactNumber": "1234567814",
+      "year": "2300",
+      "photo": "https://randomuser.me/api/portraits/women/23.jpg",
+      "totalPurchasesPerYear": "23000"
+    },
+    {
+      "customerId": 24,
+      "name": "Customer 24",
+      "city": "City 24",
+      "contactNumber": "1234567815",
+      "year": "2400",
+      "photo": "https://randomuser.me/api/portraits/men/24.jpg",
+      "totalPurchasesPerYear": "24000"
+    },
+    {
+      "customerId": 25,
+      "name": "Customer 25",
+      "city": "City 25",
+      "contactNumber": "1234567816",
+      "year": "2500",
+      "photo": "https://randomuser.me/api/portraits/men/25.jpg",
+      "totalPurchasesPerYear": "25000"
+    },
+    {
+      "customerId": 26,
+      "name": "Priyanka Gupta",
+      "city": "Bangalore",
+      "contactNumber": "768",
+      "year": "077",
+      "photo": "https://posterjack.ca/cdn/shop/articles/Tips_for_Taking_Photos_at_the_Beach_55dd7d25-11df-4acf-844f-a5b4ebeff4df.jpg?v=1563409972&width=1500",
+      "totalPurchasesPerYear": "067"
+    }
+  ]
+}

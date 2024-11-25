@@ -1,0 +1,215 @@
+/* General Layout */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f7f7f7; /* Light neutral background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 1.2em;
+    color: #2c3e50; /* Dark grayish blue */
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .error-message {
+    color: #e74c3c; /* Soft red for errors */
+    text-align: center;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  
+  /* Form & Button Styles */
+  h3 {
+    font-size: 1em;
+    color: #34495e; /* Muted blue-gray */
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  
+  input, button {
+    width: 100%;
+    max-width: 280px;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #bdc3c7;
+    font-size: 1em;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    transition: 0.3s ease-in-out;
+  }
+  
+  input:focus {
+    border-color: #00bcd4; /* Vibrant blue for focus */
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.3);
+  }
+  
+  button {
+    background-color: #00bcd4; /* Vibrant blue */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    box-shadow: 0 4px 10px rgba(0, 188, 212, 0.2);
+    transition: transform 0.2s, box-shadow 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #0097a7; /* Slightly darker blue */
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 188, 212, 0.3);
+  }
+  
+  button:active {
+    background-color: #007c8b; /* Darker shade on active */
+  }
+  
+  /* Customer List Section */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    margin-top: 30px;
+  }
+  
+  .customer-card {
+    background-color: #ffffff;
+    border-radius: 12px; /* Rounded corners for a soft look */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    width: 100%;
+    max-width: 240px;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .customer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .customer-photo {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .customer-card:hover .customer-photo {
+    transform: scale(1.05);
+  }
+  
+  .customer-details {
+    padding: 10px;
+    background-color: #ecf0f1; /* Light gray background for details */
+    border-top: 2px solid #bdc3c7;
+  }
+  
+  .customer-name {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .customer-details p {
+    font-size: 0.9em;
+    color: #7f8c8d; /* Muted text color */
+    margin-bottom: 6px;
+  }
+  
+  .customer-details strong {
+    color: #34495e;
+  }
+  
+  /* Buttons inside the Card */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .edit-btn, .delete-btn {
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+  }
+  
+  .edit-btn {
+    background-color: #27ae60; /* Green for edit */
+    color: #ffffff;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c; /* Red for delete */
+    color: #ffffff;
+  }
+  
+  .edit-btn:hover {
+    background-color: #2ecc71;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Tablets */
+  @media (max-width: 768px) {
+    .card-container {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+  
+    .customer-card {
+      max-width: 220px;
+    }
+  
+    .customer-photo {
+      height: 150px;
+    }
+  
+    button, input {
+      font-size: 0.9em;
+    }
+  }
+  
+  /* Smartphones */
+  @media (max-width: 480px) {
+    .card-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .customer-card {
+      width: 100%;
+      max-width: none;
+    }
+  
+    .customer-photo {
+      height: 120px;
+    }
+  
+    button, input {
+      font-size: 0.8em;
+      padding: 8px;
+    }
+  }

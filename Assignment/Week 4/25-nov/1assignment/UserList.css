@@ -1,0 +1,250 @@
+/* General layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row; /* Align children side by side */
+    justify-content: space-between;
+    gap: 30px; /* Adds space between the form and the table */
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    flex-wrap: wrap; /* Allow wrapping when needed on smaller screens */
+  }
+  
+  /* Form section on left */
+  .form-section {
+    flex: 1;
+    max-width: 48%; /* Limit the form's width to make space for the table */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  form h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  input:focus {
+    outline-color: #4CAF50;
+    border-color: #4CAF50;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  button[type="button"] {
+    background-color: #f44336;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #e53935;
+  }
+  
+  /* Table section on right */
+  .table-section {
+    flex: 2; /* Give the table more space */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1200px) {
+    .container {
+      flex-direction: column; /* Stack the form and table vertically on smaller screens */
+      gap: 20px; /* Reduce space between form and table */
+    }
+  
+    .form-section {
+      max-width: 100%;
+    }
+  
+    .table-section {
+      max-width: 100%;
+    }
+  }
+  
+  /* For tablets and smaller devices */
+  @media screen and (max-width: 768px) {
+    .form-section,
+    .table-section {
+      max-width: 100%;
+    }
+  
+    table {
+      font-size: 14px;
+    }
+  
+    th,
+    td {
+      padding: 8px;
+    }
+  
+    button {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  
+    input {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    button[type="submit"] {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    button[type="button"] {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+  
+  /* For small devices like phones */
+  @media screen and (max-width: 480px) {
+    body {
+      padding: 10px;
+    }
+  
+    .container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    table {
+      font-size: 12px;
+    }
+  
+    th,
+    td {
+      padding: 8px;
+    }
+  
+    button {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+  
+    .form-section,
+    .table-section {
+      max-width: 100%;
+    }
+  
+    form {
+      width: 100%;
+    }
+  
+    input {
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    button[type="submit"] {
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    button[type="button"] {
+      padding: 12px;
+      font-size: 14px;
+    }
+  }
+  
